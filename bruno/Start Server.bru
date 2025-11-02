@@ -1,0 +1,22 @@
+meta {
+  name: Start Server
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{jupyter_api_url}}/users/{{username}}/server
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "profile": "2025-12"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: List Servers
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{jupyter_api_url}}/users/{{username}}?include_stopped_servers=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  include_stopped_servers: true
+}
+
+settings {
+  encodeUrl: true
+}

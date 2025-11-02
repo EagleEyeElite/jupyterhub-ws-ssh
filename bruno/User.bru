@@ -1,0 +1,15 @@
+meta {
+  name: User
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{jupyter_api_url}}/user
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

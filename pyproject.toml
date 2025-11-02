@@ -1,0 +1,12 @@
+[project]
+name = "jupyterhub-manager"
+version = "0.1.0"
+description = "JupyterHub server management tool"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.0",
+    "websocket-client>=1.6.0",
+    "truststore>=0.8.0",
+]

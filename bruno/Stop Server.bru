@@ -1,0 +1,15 @@
+meta {
+  name: Stop Server
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{jupyter_api_url}}/users/{{username}}/server
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
