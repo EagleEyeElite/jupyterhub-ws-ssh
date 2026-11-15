@@ -5,6 +5,10 @@ A Python tool for tunneling SSH to a JupyterHub container through jupyter-server
 ### How it works
 
 ```mermaid
+---
+config:
+  look: classic
+---
 flowchart LR
     user["💻 User<br/>ssh → websocket"]
     proxy["🌐 JupyterHub Proxy<br/>http"]
@@ -17,9 +21,9 @@ flowchart LR
     proxy --> n2
     proxy -.- n3
 
-    classDef base fill:transparent,stroke:#64748b,stroke-width:2px
-    classDef active fill:transparent,stroke:#3b82f6,stroke-width:2px
-    classDef idle fill:transparent,stroke:#9ca3af,stroke-dasharray:4 3
+    classDef base fill:transparent,stroke:#64748b,stroke-width:2px,filter:none
+    classDef active fill:transparent,stroke:#3b82f6,stroke-width:2px,filter:none
+    classDef idle fill:transparent,stroke:#9ca3af,stroke-dasharray:4 3,filter:none
     class user,proxy base
     class n2 active
     class n1,n3 idle
